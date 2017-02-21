@@ -8,6 +8,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+	<parent>
+		<artifactId>course</artifactId>
+		<groupId>com.nchu.tech.course</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
 	<name>course-web</name>
 	<description>nchu tech course project for Spring Boot</description>
 
@@ -38,7 +44,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
