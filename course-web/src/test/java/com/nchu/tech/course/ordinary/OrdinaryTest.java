@@ -2,6 +2,7 @@ package com.nchu.tech.course.ordinary;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -34,7 +35,7 @@ public class OrdinaryTest {
     public void testOverLoadCollectors(){
         String[] args = new String[]{"aawwsa", "ac", "acb", "adef"};
         Arrays.sort(args, new Comparator<String>() {
-            @Override
+
             public int compare(String a, String b) {
                 return a.length() - b.length();
             }
@@ -74,6 +75,52 @@ public class OrdinaryTest {
         System.out.println();
         double timeCost = (System.currentTimeMillis() - startTime)/1000d;
         System.out.println(String.format("time cost %s", timeCost));
+    }
+
+    /***
+     * 每月兔子数量 还是有问题
+     */
+    @Test
+    public void testRabbitCount(){
+        for (int i = 1; i < 11; i++) {
+            System.out.print(rabbitCount(i) + "\t");
+        }
+        System.out.println();
+    }
+
+    private int rabbitCount(int month){
+        if (month == 1) {
+            return 1;
+        }
+        if (month == 2) {
+            return 1;
+        }
+        return (month / 3) + rabbitCount(month-1);
+    }
+
+    @Test
+    public void testExceptionCatch(){
+        BigDecimal temp = null;
+        try {
+            temp = temp.add(new BigDecimal(1000d));
+        } catch (NullPointerException ne){
+            System.out.println("ne");
+        } catch (RuntimeException re) {
+            System.out.println("re");
+        } finally {
+            System.out.println("finally");
+        }
+    }
+
+    @Test
+    public void testBasicEqual(){
+        Integer a = 10;
+        Integer b = 10;
+        System.out.println(a==b);
+
+        String stra = "abc";
+        String strb = new String("abc");
+        System.out.println(stra == strb);
     }
 
 
