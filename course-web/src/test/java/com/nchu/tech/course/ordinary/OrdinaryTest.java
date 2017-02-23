@@ -123,5 +123,13 @@ public class OrdinaryTest {
         System.out.println(stra == strb);
     }
 
+    @Test
+    public void testGeneratorArray(){
+        Integer[] temp = new Integer[10];
+
+
+    }
+
+
 
 }

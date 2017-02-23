@@ -6,11 +6,8 @@ import lombok.Setter;
 /**
  * Created by fujianjian on 2017/2/20.
  */
-public class User {
+public class User extends BaseModule {
 
-    @Getter
-    @Setter
-    private String id;
     @Getter
     @Setter
     private String name;

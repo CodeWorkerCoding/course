@@ -10,19 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.nchu.tech.course</groupId>
-    <artifactId>course-service</artifactId>
+    <artifactId>course-helper</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.nchu.tech.course</groupId>
-            <artifactId>course-domain</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.nchu.tech.course</groupId>
-            <artifactId>course-helper</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 
 </project>

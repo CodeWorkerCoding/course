@@ -20,6 +20,7 @@
         <module>course-service</module>
         <module>course-service-impl</module>
         <module>course-web</module>
+        <module>course-helper</module>
     </modules>
 
 </project>
