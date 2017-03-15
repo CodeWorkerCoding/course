@@ -22,4 +22,11 @@ public class UserServiceTest extends BaseTest {
         userService.create(user);
     }
 
+    @Test
+    public void testFetchUserInfo(){
+       User user = userService.get("Allenzzzzz");
+        System.out.println(user.getNickname() + ":  " + user.getId());
+
+    }
+
 }
