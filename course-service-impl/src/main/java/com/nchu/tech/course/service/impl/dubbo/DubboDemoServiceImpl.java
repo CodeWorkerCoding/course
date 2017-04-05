@@ -1,4 +1,4 @@
-package com.nchu.tech.course.impl.dubbo;
+package com.nchu.tech.course.service.impl.dubbo;
 
 import com.nchu.tech.course.service.dubbo.DubbeDemoService;
 import org.springframework.stereotype.Service;

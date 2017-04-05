@@ -1,4 +1,4 @@
-package com.nchu.tech.course.impl;
+package com.nchu.tech.course.service.impl;
 
 import com.nchu.tech.course.domain.User;
 import com.nchu.tech.course.mapper.UserMapper;

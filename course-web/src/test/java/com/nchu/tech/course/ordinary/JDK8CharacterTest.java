@@ -1,6 +1,8 @@
 package com.nchu.tech.course.ordinary;
 
 import com.google.common.collect.Lists;
+import lombok.Getter;
+import lombok.Setter;
 import org.junit.Test;
 
 import java.util.List;
@@ -21,4 +23,30 @@ public class JDK8CharacterTest {
         List<String> lowerNames2 = names.stream().map(String::toLowerCase).collect(Collectors.toList());
         System.out.println(lowerNames2.toString());
     }
+
+    @Test
+    public void testMethodRefer() {
+        List<Demo> demos = Lists.newArrayList(new Demo(1), new Demo(null), new Demo(2), new Demo(3));
+        demos.parallelStream().forEach(Demo::getId);
+        List<Integer> IdList = demos.stream().map(Demo::getId).collect(Collectors.toList());
+        System.out.println(IdList.toString());
+
+    }
+
+    public class Demo {
+        private Integer id;
+
+        public Demo() {
+        }
+
+        public Demo(Integer id) {
+            this.id = id;
+        }
+
+        public Integer getId() {
+            System.out.println(id);
+            return id;
+        }
+    }
+
 }
