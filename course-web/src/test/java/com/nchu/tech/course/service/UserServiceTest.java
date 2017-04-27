@@ -37,4 +37,11 @@ public class UserServiceTest extends BaseTest {
     }
 
 
+    @Test
+    public void testFetchUserInfo(){
+       User user = userService.get("Allenzzzzz");
+        System.out.println(user.getNickname() + ":  " + user.getId());
+
+    }
+
 }
