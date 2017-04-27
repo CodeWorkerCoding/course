@@ -22,4 +22,19 @@ public class UserServiceTest extends BaseTest {
         userService.create(user);
     }
 
+    @Test
+    public void testCreateUser2(){
+        User user = new User();
+        user.setName("付健健");
+        userService.create(user);
+    }
+
+    @Test
+    public void testCreateUser3(){
+        User user = new User();
+        user.setName("雅文");
+        userService.create(user);
+    }
+
+
 }
